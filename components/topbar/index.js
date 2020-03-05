@@ -2,7 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 import { Header, Icon } from 'react-native-elements'
 import styled from 'styled-components'
-import { GREEN_MFL } from '../theme'
+import { GREEN_MFL } from '../../theme'
 
 const StyledRightComponent = styled(View)`
   display: flex;
@@ -15,14 +15,14 @@ const StyledIcon = styled(Icon)`
 
 const RightComponent = () => (
   <StyledRightComponent>
-    <StyledIcon name='bell' type='font-awesome' color='#fff' containerStyle={{ marginRight: 5, marginLeft: 5 }} />
+    <StyledIcon name='search' type='font-awesome' color='#fff' containerStyle={{ marginRight: 5, marginLeft: 5 }} />
     <StyledIcon name='user-circle' type='font-awesome' color='#fff' containerStyle={{ marginRight: 5, marginLeft: 5 }} />
   </StyledRightComponent>
 )
 
 const Topbar = () => 
   <Header
-    leftComponent={{ icon: 'search', color: '#fff' }}
+    leftComponent={<Icon name='bell' type='font-awesome' color='#fff' />}
     centerComponent={{ text: 'WORLD', style: { color: '#fff', fontWeight: '800' } }}
     rightComponent={<RightComponent />}
     containerStyle={{

@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import styled from 'styled-components'
-import Topbar from './components/Topbar'
+import Topbar from './components/topbar'
 import Navigation from './components/navigation'
 
 const StyledAppView = styled(View)`

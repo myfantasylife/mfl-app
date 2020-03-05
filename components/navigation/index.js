@@ -14,9 +14,9 @@ const Navigation = () => {
       <Tab.Navigator tabBarOptions={{
         activeTintColor: GREEN_MFL
       }}>
-        {map((tab, i) => (
+        {map(tab => (
           <Tab.Screen 
-            key={i}
+            key={tab.name}
             name={tab.name} 
             component={tab.component} 
             options={{
