@@ -5,6 +5,9 @@
 - Installer les node_modules: `npm install`
 - Lancer le projet `npm start` 
 
+## Branches
+- Créer une branche à partir de la branche `dev`
+
 ## Commits
 Pour chaque commit ajouter le bon préfixe: 
 - feat
