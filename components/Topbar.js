@@ -2,6 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 import { Header, Icon } from 'react-native-elements'
 import styled from 'styled-components'
+import { GREEN_MFL } from '../theme'
 
 const StyledRightComponent = styled(View)`
   display: flex;
@@ -25,7 +26,7 @@ const Topbar = () =>
     centerComponent={{ text: 'WORLD', style: { color: '#fff', fontWeight: '800' } }}
     rightComponent={<RightComponent />}
     containerStyle={{
-    backgroundColor: '#0B3B2E',
+    backgroundColor: GREEN_MFL,
     justifyContent: 'space-around',
     }}
   />
