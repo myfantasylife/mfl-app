@@ -1,8 +1,8 @@
 ## Installation
 - Node et npm sont requis
-- Installation de expo-cli en global: `npm install -g -expo-cli`
 - Clôner le projet: `git clone https://github.com/Madylune/MFL-app.git`
 - Installer les node_modules: `npm install`
+- Installation de expo-cli en global: `npm install -g -expo-cli`
 - Lancer le projet `npm start` 
 
 ## Branches
