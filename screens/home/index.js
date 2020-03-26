@@ -7,8 +7,8 @@ import get from 'lodash/fp/get'
 import concat from 'lodash/fp/concat'
 import orderBy from 'lodash/fp/orderBy'
 import flow from 'lodash/fp/flow'
-import { MARKETING_ACTIVITIES } from './fixtures'
 import { getAllPosts } from '../../api/posts'
+import { getAllNews } from '../../api/news'
 
 const StyledHome = styled(ScrollView )``
 
@@ -41,28 +41,31 @@ const StyledImage = styled(Image)`
 
 class Home extends Component {
   state = {
-    posts: []
+    posts: [],
+    news: []
   }
 
   componentDidMount() {
-    this.loadPosts()
+    this.loadActivities()
   }
 
-  loadPosts() {
+  loadActivities() {
     getAllPosts().then(data => this.setState({ posts: data }))
+    getAllNews().then(data => this.setState({ news: data }))
   }
 
   render() {
-    const { posts } = this.state
+    const { posts, news } = this.state
     const activities = flow(
-      concat(MARKETING_ACTIVITIES),
+      concat(news),
       orderBy('date', 'desc')
     )(posts)
+
     return (
       <StyledHome>
-        {map((activity, i) => (
-          <StyledCard key={i} title={activity.isMarketing ? activity.title : undefined}>
-            {!activity.isMarketing && (
+        {map(activity => (
+          <StyledCard key={activity._id} title={get('isMarketing', activity) ? get('title', activity) : undefined}>
+            {!get('isMarketing', activity) && (
             <StyledHeader>
               <Avatar
                 rounded
@@ -75,8 +78,8 @@ class Home extends Component {
             )}
             <StyledContent>
               {map((image, i) => (
-                <StyledImage key={i} source={{ uri: image.url }} />
-              ), activity.image)}
+                <StyledImage key={i} source={{ uri: image }} />
+              ), get('image', activity))}
               <StyledContentText>{get('content', activity)}</StyledContentText>
             </StyledContent>
           </StyledCard>
