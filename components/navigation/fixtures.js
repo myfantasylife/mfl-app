@@ -1,19 +1,12 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import Home from '../../screens/home'
+import Publish from '../../screens/publication'
 
 const TeamScreen = () => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Team</Text>
-    </View>
-  )
-}
-
-const PublishScreen = () => {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Publish</Text>
     </View>
   )
 }
@@ -47,7 +40,7 @@ export const NAVIGATION_TABS = [
   },
   {
     name: 'Publier',
-    component: PublishScreen,
+    component: Publish,
     icon: 'edit'
   },
   {
