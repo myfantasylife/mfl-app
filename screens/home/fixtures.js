@@ -1,6 +1,7 @@
-export const ACTIVITIES = [
+export const MARKETING_ACTIVITIES = [
   {
     isMarketing: true,
+    date: 6807724112794877952,
     title: "Offre exceptionnelle !",
     content: "-50% sur tous les costumes cette semaine !",
     image: [
@@ -10,28 +11,8 @@ export const ACTIVITIES = [
     ]
   },
   {
-    isMarketing: false,
-    user: {
-      name: "Luna",
-      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"
-    },
-    content: "Ipsum nisi voluptate irure aliquip ea amet magna ad.",
-  },
-  {
-    isMarketing: false,
-    user: {
-      name: "Bryan",
-      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg"
-    },
-    content: "Tempor magna veniam esse laboris eu consectetur qui mollit reprehenderit ea fugiat..",
-    images: [
-      {
-        url: "https://s.gameloop.fun/gameassistant/web/cdb7c859fcfbb4c8cdbdc1bed0a08d8f.jpg?max_age=31536000"
-      }
-    ]
-  },
-  {
     isMarketing: true,
+    date: 1585219396,
     title: "Event de la semaine !",
     content: "Reprehenderit tempor consequat velit exercitation excepteur excepteur cillum ut qui aliqua cillum non veniam occaecat. Ullamco duis incididunt esse veniam aute quis. Consectetur laboris ad ea labore cillum nostrud laboris magna ipsum dolor mollit quis. Cupidatat ut do ea amet et cupidatat fugiat. Ex amet eiusmod et id eiusmod consequat magna exercitation id in et.",
     image: [
